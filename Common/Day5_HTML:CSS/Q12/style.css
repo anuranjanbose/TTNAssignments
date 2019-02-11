@@ -1,0 +1,149 @@
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+.inside-head::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  line-height: 0;
+}
+
+.inside-head {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.head hr{
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.head-left {
+
+  float: left;
+}
+.head-left h2 {
+  padding: 14px 16px;
+  color: green;
+
+}
+
+.head-right {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color:     ;
+}
+
+li {
+  float: left;
+}
+
+/* HEADER DONE */
+
+/*FORM TABLE START */
+
+.table {
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 50px;
+}
+
+.tab {
+  border: 1px solid #b9c3c9;
+  width: 100%;
+  
+}
+
+.row1 {
+  background-color: #b9c3c9;
+  text-align: left;
+}
+.row1 th {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  color: white;
+  }
+
+.inside-row2 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.inside-row3 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.inside-row4 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.inside-row5 {
+  margin-right: 30px;
+  margin-left:  30px;
+}
+
+.inside-row6 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.inside-row7 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.inside-row8 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.inside-row9 {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.inside-row10{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.row10 {
+  background-color:#b9c3c9; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
