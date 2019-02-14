@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(function(){	  
+    setInterval(function () {
+        $('#slider').animate({left: 0}, 500, function () {
+            $('#slider img:first-child').appendTo('#slider');
+            $('#slider').css('left', '0');
+    
+        });
+     }, 1000);
+});
+</script>
+<style>
+#slider {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 500px;
+    height: 500px;
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title></title>
+</head>
+<body>
+<div id="slider">
+    <img src="img/cp.jpg"></img>
+    <img src="img/lp.jpg"></img> 
+    <img src="img/m5.jpg"></img>
+</div>
+</body>
+ </html>

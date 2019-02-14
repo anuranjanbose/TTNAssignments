@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+ 	<script>
+ 		$(document).ready(function(){
+ 			$('div').on('click',function(){
+ 				alert("Parent div Clicked");
+ 			})
+
+ 			$('div > span').on('click',function(e){
+ 				e.stopPropagation();
+ 			});
+ 		});
+ 	</script>
+ </head>
+ <body>
+
+ 	<div>
+ 		<h3>Click for alert</h3>
+ 		<p>Click for alert</p>
+ 		<span>No alert</span>
+ 	</div>
+ 
+ </body>
+ </html>

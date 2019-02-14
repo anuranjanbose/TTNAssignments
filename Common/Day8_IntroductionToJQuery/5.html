@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+	<script>
+		function func() {
+		$("#main > .target").css("font-size","50px");
+	}
+	</script>
+</head>
+<body>
+	<div id="main">
+		<h1 class="target">This is .target inside #main </h1>
+	</div>
+
+	<div id="local">
+		<h1 class="target">This is .target inside #local</h1>
+	</div>
+
+	<button onclick="func()">Click to change font size</button>
+	
+</body>
+</html>

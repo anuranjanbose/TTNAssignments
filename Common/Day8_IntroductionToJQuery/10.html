@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+$(document).ready(function () {
+    $(".hoverli").hover(
+  function () {
+     $('ul.file_menu').stop(true, true).slideDown('medium');
+  }, 
+  function () {
+     $('ul.file_menu').stop(true,true).slideUp('medium');
+  }
+);
+
+});
+</script>
+<style>
+#button {
+    height: 32px;
+    width: 184px;
+    margin: auto;
+}
+
+ul, li {
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+
+.menu_class {
+    border:1px solid #1c1c1c;
+}
+
+.file_menu li {
+    background-color: lightblue;
+}
+
+.file_menu li a {
+    color:#FFFFFF; 
+    text-decoration:none; 
+    padding:10px; 
+    display:block;
+}
+.bar{
+ background-color:black;
+  width:100%
+  margin:0 auto;
+  height:10px;
+  
+}
+.file_menu li a:hover {
+    padding:10px;
+	font-size:150%;
+    font-weight:bold;
+    color: red;
+}
+</style>
+</head>
+<body>
+<div id="button">
+    <ul class="hover">
+       <li class="hoverli">
+		
+  <hr class="bar">
+	<ul class="file_menu">
+        <li><a href="#file">File</a></li>
+        <li><a href="#edit">Edit</a></li>
+        <li><a href="#view">View</a></li>
+        <li><a href="#insert">Insert</a></li>
+        <li><a href="#modify">Modify</a></li>
+        <li><a href="#control">Control</a></li>
+        <li><a href="#debug">Debug</a></li>
+        <li><a href="#window">Window</a></li>
+       ]
+        </ul>
+     <li>
+</ul>
+</div>
+
+</body>
+</html>
