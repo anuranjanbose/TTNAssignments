@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title></title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("button").click(function(){
-            $("ol").append("<li>list item <a href='javascript:void(0);' class='remove'>&times;</a></li>"); 
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $.get("https://jsonplaceholder.typicode.com/posts?userId=1", function(data){
+          var el; var row=[];
+          for (var i = 0; i < data.length; i++) {
+            row=data[i];
+              el+="<tr><td>"+row["userId"]+"</td><td>"+row["id"]+"</td><>td"+row["title"]+"</td><td>"+row["body"]+"</td><td>"+
+            "<button class='delete' id="+i+">X</button></td></tr>";
+          }
+          $("table").append(el);
+          alert("Data Loaded successfully. click Ok to continue");
         });
-        $(document).on("click", "a.remove" , function() {
-            $(this).parent().remove();
+        $(document).on("click",".delete",function(){
+          $("#"+$(this).attr('id')).parent().parent().remove();
         });
-    });
-</script>
-</head>
-<body>
-    <button>Add new list item</button>
-    <p>Click the above button to dynamically add new list items. You can remove it later.</p>
-    <ol>
-        <li>list item</li>
-        <li>list item</li>
-        <li>list item</li>
-    </ol>
-</body> 
-</html>        
+      });
+    </script>
+  </head>
+  <body >
+  
+    <table border= "1px solid black">
+      <tr>
+        <th>User ID</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Click To remove</th>
+      </tr>
+    </table>
+  </body>
+</html>

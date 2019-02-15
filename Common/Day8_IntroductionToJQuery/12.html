@@ -9,7 +9,7 @@
  				alert("Parent div Clicked");
  			})
 
- 			$('div > span').on('click',function(e){
+ 			$('div > .child3').on('click',function(e){
  				e.stopPropagation();
  			});
  		});
@@ -17,10 +17,10 @@
  </head>
  <body>
 
- 	<div>
- 		<h3>Click for alert</h3>
- 		<p>Click for alert</p>
- 		<span>No alert</span>
+ 	<div style="background-color:#a68a8a; padding:5px;">
+ 		<h4 style="padding:5px; background-color:#bf6262;" class="child1">Child 1. Clicking on this will evoke the parent div class</h4> <br>
+ 		<h4 style="padding:5px;background-color:#bf6262;" class="child2">Child 2. Clicking on this will evoke the parent div class</h4><br>
+ 		<h4 style="padding:5px;background-color:#bf6262;" class="child3">Child 3. Clicking on this will NOT evoke the parent div class</h4>
  	</div>
  
  </body>
