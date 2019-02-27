@@ -249,6 +249,14 @@ var nestedDictionary : [String : Any] = [ "1" : "iOS",
 print(secretIdentities.keys)
 
 
+
+
+
+
+
+
+
+
                                    // SUBSCRIPT
 
 /*
@@ -276,18 +284,19 @@ subscript (<parameters>) -> <return type> {
 // 2. Create a simple subscript that outputs true if a string contains a substring and false otherwise.
 
 
-class substringTest {
-        subscript(index: Int) -> String {
-            let string = "Hello"
-            let substring = "Anuranjan"
-            
-            if string.contains(substring) {
-                print("Substring: \(substring)")
-                return substring
-            }
-            else{
-            return "empty search"
-                
-            }
+class SubstringCheck {
+    private var str : [String] = ["Hello", "Hell"]
+    
+    subscript(index: Int) -> Bool {
+        get {
+            return str[0].contains(str[1])
         }
+    }
+    
+    
 }
+
+let obj5 = SubstringCheck()
+
+print(obj5[0])
+
