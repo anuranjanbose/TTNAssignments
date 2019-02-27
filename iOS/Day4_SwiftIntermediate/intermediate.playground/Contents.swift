@@ -114,13 +114,15 @@ Operation Result using func as param = 25.0
 
 */
 
+// Using Class
+
 class Calculator {
     
     enum operation {
-        case addition(Double, Double)
-        case subtraction(Double, Double)
-        case division(Double, Double)
-        case multiplication(Double, Double)
+        case addition(operandOne : Double, operandTwo : Double)
+        case subtraction(operandOne : Double, operandTwo : Double)
+        case division(operandOne : Double, operandTwo : Double)
+        case multiplication(operandOne : Double, operandTwo : Double)
     }
     
     func equals(oper : operation) -> Double {
@@ -139,5 +141,34 @@ class Calculator {
 }
 
 let obj = Calculator()
-print(obj.equals(oper: .addition(3, 9)))
+print(obj.equals(oper: .addition(operandOne : 3, operandTwo :9)))
+print(obj.equals(oper: .multiplication(operandOne: 4, operandTwo: 5)))
+
+// Using Structure
+
+struct CalculatorStruct {
+    
+    func addition(operandOne : Int, operandTwo : Int) -> Int
+    {
+        return operandOne + operandTwo
+    }
+    
+    func subtraction(operandOne : Int, operandTwo : Int) -> Int
+    {
+        return operandOne - operandTwo
+    }
+    func multiplication(operandOne : Int, operandTwo : Int) -> Int {
+        return operandTwo * operandOne
+    }
+    func division(operandOne : Int, operandTwo : Int) -> Int {
+        return operandTwo/operandOne
+    }
+    func equalFuncOp(operationValues : (Int, Int), operationFunc : (Int, Int) -> Int) -> Int{
+        let resultC = operationFunc(operationValues.0, operationValues.1)
+        return resultC
+    }
+}
+
+let obj4 = CalculatorStruct()
+print(obj4.equalFuncOp(operationValues: (4,5), operationFunc: obj4.addition(operandOne:operandTwo:)))
 
