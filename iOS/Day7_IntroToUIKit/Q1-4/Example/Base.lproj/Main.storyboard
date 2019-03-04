@@ -18,37 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfi-XC-S56">
-                                <rect key="frame" x="80" y="146" width="215" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yy-sY-5Ou">
-                                <rect key="frame" x="108" y="309" width="159" height="48"/>
-                                <state key="normal" title="Push VC2"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yy-sY-5Ou">
+                                <rect key="frame" x="139" y="300" width="97" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1160799562" green="1" blue="0.2596950563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Push VC2">
+                                    <color key="titleColor" red="0.0024241143159999998" green="0.0016988136200000001" blue="0.042685395080000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="moveToNextView" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nj3-1t-g6V"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="1yy-sY-5Ou" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="1w5-l1-1yE"/>
-                            <constraint firstItem="tfi-XC-S56" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="82" id="MMG-ys-8y6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1yy-sY-5Ou" secondAttribute="trailing" constant="108" id="X1a-Cd-VIz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tfi-XC-S56" secondAttribute="trailing" constant="80" id="aYi-ea-FZq"/>
-                            <constraint firstItem="tfi-XC-S56" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="rGB-dR-d5d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1yy-sY-5Ou" secondAttribute="bottom" constant="310" id="rGl-bw-IWU"/>
-                            <constraint firstItem="1yy-sY-5Ou" firstAttribute="top" secondItem="tfi-XC-S56" secondAttribute="bottom" constant="142.5" id="vGE-p1-A39"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Moh-E9-FPi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="16"/>
+            <point key="canvasLocation" x="1168.8" y="15.742128935532236"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="oAs-fv-Tt9">
@@ -59,24 +48,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8T-40-CYp">
-                                <rect key="frame" x="138" y="308" width="99" height="30"/>
+                                <rect key="frame" x="123" y="562" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PRESENT VC3"/>
+                                <color key="backgroundColor" red="1" green="0.99329283180000005" blue="0.76124659490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="PRESENT VC3">
+                                    <color key="titleColor" red="0.18496406907182777" green="0.74454338049847713" blue="0.045910711499100851" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="moveToVC3" destination="4mJ-xb-Rj2" eventType="touchUpInside" id="ISM-vW-BSx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04K-8S-FT5">
-                                <rect key="frame" x="118" y="227" width="128" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azx-cb-P5V">
-                                <rect key="frame" x="150" y="389" width="74" height="30"/>
+                                <rect key="frame" x="123" y="301" width="114" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="PUSH VC3"/>
+                                <color key="backgroundColor" red="0.1160799562" green="1" blue="0.2596950563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="PUSH VC3">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="pushVC3" destination="4mJ-xb-Rj2" eventType="touchUpInside" id="Cc7-db-YMb"/>
                                 </connections>
@@ -98,28 +86,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TU-zp-8fp">
-                                <rect key="frame" x="121" y="301" width="114" height="47"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-Rn-igw">
+                                <rect key="frame" x="142" y="566" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To Root(VC1)"/>
+                                <color key="backgroundColor" red="1" green="0.99329283180000005" blue="0.76124659490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="1" green="0.12083381629999999" blue="0.14422826859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="popToRootViewController" destination="Ojw-9S-tSS" eventType="touchUpInside" id="RL8-oQ-Dqd"/>
+                                    <action selector="dismissVC" destination="Ojw-9S-tSS" eventType="touchUpInside" id="xBs-bE-a9v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDz-Bi-zHm">
-                                <rect key="frame" x="129" y="401" width="110" height="47"/>
+                                <rect key="frame" x="121" y="310" width="144" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go To VC2"/>
+                                <color key="backgroundColor" red="0.6323167824" green="1" blue="0.67016335849999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Push VC4"/>
                                 <connections>
-                                    <action selector="popToViewController" destination="Ojw-9S-tSS" eventType="touchUpInside" id="W8a-wy-mFh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-Rn-igw">
-                                <rect key="frame" x="309" y="66" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <action selector="dismissVC" destination="Ojw-9S-tSS" eventType="touchUpInside" id="xBs-bE-a9v"/>
+                                    <action selector="goToVC4" destination="Ojw-9S-tSS" eventType="touchUpInside" id="xWO-db-Uj3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -131,6 +115,93 @@
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="15.742128935532236"/>
         </scene>
+        <!--View Controller4-->
+        <scene sceneID="5qc-Ok-fkc">
+            <objects>
+                <viewController storyboardIdentifier="ViewController4" id="Lon-kP-UKb" customClass="ViewController4" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ci4-1P-AgF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEE-LZ-sdc">
+                                <rect key="frame" x="131" y="309" width="113" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Push VC5"/>
+                                <connections>
+                                    <action selector="goToVC5" destination="Lon-kP-UKb" eventType="touchUpInside" id="6U8-4d-zJR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ckt-qn-2ej"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g33-Oo-QS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3324" y="17.541229385307346"/>
+        </scene>
+        <!--View Controller5-->
+        <scene sceneID="EDY-9a-kRV">
+            <objects>
+                <viewController storyboardIdentifier="ViewController5" id="rhA-mp-BmM" customClass="ViewController5" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aal-bN-KVX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-2Q-Vpo">
+                                <rect key="frame" x="115" y="194" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.21664187469999999" green="0.97824238990000001" blue="0.57373528910000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Go to Root VC"/>
+                                <connections>
+                                    <action selector="rootVC" destination="rhA-mp-BmM" eventType="touchUpInside" id="YER-dH-7j8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T5-Dq-cbA">
+                                <rect key="frame" x="116" y="526" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83945927909999996" green="0.84363092080000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton" destination="rhA-mp-BmM" eventType="touchUpInside" id="5XO-cM-4TK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EmR-ea-vib">
+                                <rect key="frame" x="75" y="299" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter View Controller no." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAs-Gs-2q4">
+                                        <rect key="frame" x="23" y="8" width="195" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiN-c4-P02">
+                                        <rect key="frame" x="48" y="49" width="145" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.77857240900000002" green="1" blue="0.66288560760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Go to specific VC"/>
+                                        <connections>
+                                            <action selector="specificVC" destination="rhA-mp-BmM" eventType="touchUpInside" id="pcK-s4-shI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87367744940000003" green="1" blue="0.97280081399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8Ao-hy-2jY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldVC" destination="dAs-Gs-2q4" id="k6r-Xc-UTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5y-Vr-Zb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4088.8000000000002" y="18.440779610194905"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="37v-cL-W94">
             <objects>
@@ -139,6 +210,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4u8-WC-5fq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.12083381629999999" blue="0.14422826859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

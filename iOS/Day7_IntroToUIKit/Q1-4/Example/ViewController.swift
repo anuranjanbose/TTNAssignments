@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    var label2 : String = "Hello from VC1"
     
     @IBOutlet var label1 : UILabel!
 
@@ -36,6 +36,11 @@ class ViewController: UIViewController {
         //label1.text = "abc"
         self.title = "Root View Controller"
         print("ViewDidLoad")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ViewController5") as! ViewController5
+        
+        controller.label5 = "Hello from View Controller 1"
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -14,6 +14,8 @@
 		7D79CA552228F6FB008CE6D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D79CA532228F6FB008CE6D2 /* LaunchScreen.storyboard */; };
 		7D79CA5D22290753008CE6D2 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D79CA5C22290753008CE6D2 /* ViewController2.swift */; };
 		7DDE062A222917D70013E4E9 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDE0629222917D70013E4E9 /* ViewController3.swift */; };
+		7DF8A226222CEE420005FEA7 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8A225222CEE420005FEA7 /* ViewController4.swift */; };
+		7DF8A228222CEE500005FEA7 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF8A227222CEE500005FEA7 /* ViewController5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7D79CA562228F6FB008CE6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D79CA5C22290753008CE6D2 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		7DDE0629222917D70013E4E9 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		7DF8A225222CEE420005FEA7 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		7DF8A227222CEE500005FEA7 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				7D79CA562228F6FB008CE6D2 /* Info.plist */,
 				7D79CA5C22290753008CE6D2 /* ViewController2.swift */,
 				7DDE0629222917D70013E4E9 /* ViewController3.swift */,
+				7DF8A225222CEE420005FEA7 /* ViewController4.swift */,
+				7DF8A227222CEE500005FEA7 /* ViewController5.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 				7D79CA5D22290753008CE6D2 /* ViewController2.swift in Sources */,
 				7DDE062A222917D70013E4E9 /* ViewController3.swift in Sources */,
 				7D79CA4B2228F6FA008CE6D2 /* AppDelegate.swift in Sources */,
+				7DF8A228222CEE500005FEA7 /* ViewController5.swift in Sources */,
+				7DF8A226222CEE420005FEA7 /* ViewController4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
