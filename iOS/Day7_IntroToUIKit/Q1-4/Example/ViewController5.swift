@@ -12,6 +12,7 @@ class ViewController5: UIViewController {
     
     var label5 : String = ""
 
+    @IBOutlet weak var labelOutlet: UILabel!
     
     @IBOutlet weak var textFieldVC: UITextField!
     override func viewDidLoad() {
@@ -24,8 +25,8 @@ class ViewController5: UIViewController {
         let obj = navArray![0] as? ViewController
         let str = obj?.label2
         print(str!)
+        labelOutlet.text = str!
         
-        textFieldVC.text = "Hello"
         // Do any additional setup after loading the view.
     }
     

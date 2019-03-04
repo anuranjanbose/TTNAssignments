@@ -190,11 +190,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.87367744940000003" green="1" blue="0.97280081399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeR-M0-Cqg">
+                                <rect key="frame" x="75" y="141" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Ao-hy-2jY"/>
                     </view>
                     <connections>
+                        <outlet property="labelOutlet" destination="HeR-M0-Cqg" id="cup-Pi-ORk"/>
                         <outlet property="textFieldVC" destination="dAs-Gs-2q4" id="k6r-Xc-UTx"/>
                     </connections>
                 </viewController>
