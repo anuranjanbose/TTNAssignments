@@ -16,9 +16,7 @@ class ViewController: UIViewController {
 
     
     @IBOutlet var button : UIButton!
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //
-    }
+   
     
     @IBAction func moveToNextView(){
         
@@ -35,28 +33,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         //label1.text = "abc"
         self.title = "Root View Controller"
-        print("ViewDidLoad")
+       
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "ViewController5") as! ViewController5
-        
-        controller.label5 = "Hello from View Controller 1"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("ViewWillAppear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("ViewDidAppear")
-    }
-   
-    override func viewWillDisappear(_ animated: Bool) {
-        print("ViewWillDisappear")
-    }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        print("ViewDidDisappear")
     }
+    
+   
 }
 

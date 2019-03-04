@@ -32,10 +32,7 @@ class ViewController2: UIViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("VC2 viewWillAppear says hello!")
-    }
+    
 
     /*
     // MARK: - Navigation
