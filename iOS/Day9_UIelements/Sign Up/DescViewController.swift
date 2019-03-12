@@ -10,26 +10,28 @@ import UIKit
 
 class DescViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
-    
     @IBOutlet weak var profilePicture: UIImageView!
-    
-    
     @IBOutlet weak var descField: UITextView!
+    
     @IBAction func addImage(_ sender: UIButton) {
-        
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             self.camera()
         }))
-        
         actionSheet.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             self.photoLibrary()
         }))
-        
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
         self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        profilePicture.layer.borderWidth=1.0
+        profilePicture.layer.masksToBounds = false
+        profilePicture.layer.cornerRadius = profilePicture.frame.width/2
+        profilePicture.clipsToBounds = true
+        // Do any additional setup after loading the view.
     }
     
     func camera() {
@@ -59,34 +61,15 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             profilePicture.image = image
-            
-            
-        }else{
+        }
+        else {
             print("Couldn't upload image!")
         }
         self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        profilePicture.layer.borderWidth=1.0
-        profilePicture.layer.masksToBounds = false
-        profilePicture.layer.cornerRadius = profilePicture.frame.width/2
-        profilePicture.clipsToBounds = true
-
-        // Do any additional setup after loading the view.
     }
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         descField.resignFirstResponder()
         return true
     }
-    
-
-
-}
+} // End of DescViewController

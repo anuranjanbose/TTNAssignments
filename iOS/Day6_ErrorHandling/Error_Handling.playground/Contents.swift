@@ -133,7 +133,7 @@ try! checkError(val: 1)
 
 /*
 
-Write a program which loads the data from a datasource of 10 employees looks like below, Program would help to give salary bonus to employees. Which is based on some conditions but if employee is not able to satisfy the condition program should throw the error with specific error condition and its description should be printed.
+Write a program which loads the data from a datasource of 10 employees looks like below, Program would help to give salary bonus to employees. Which is based on some conditions but if employee is not able to satisfy the condition, program should throw the error with specific error condition and its description should be printed.
 
 
 
@@ -195,3 +195,14 @@ ankit is eligible for bonus.
 
 
  */
+
+struct Emp {
+    var empId : Int
+    var empName : String
+    var empEmail : String
+    var joiningDate : Date
+    var isPresent : Bool
+    var competency : String
+    var attendancePercent : Double
+
+}

@@ -10,47 +10,10 @@ import UIKit
 
 class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
  
-    
-   
     @IBOutlet weak var privacyLabel: UILabel!
     @IBOutlet weak var privacySwitchOutlet: UISwitch!
-    
     @IBOutlet weak var viewPicker: UIView!
-    
-    // Button to dismiss Date Picker View
-    
-    @IBAction func donePicker(_ sender: UIButton) {
-        
-        let selectedDate =  dateOfBirthPicker.date
-        
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = .medium
-        
-        let strdate = dateFormatter.string(from: selectedDate)
-        
-        dateOfBirthField.text = strdate
-        
-        viewPicker.isHidden = true
-        submitButton.isHidden = false
-        
-    }
-    
-   // Button to dismiss Place Picker View
-    @IBAction func donePlaceButton(_ sender: UIButton) {
-        
-        viewPlacePicker.isHidden = true
-        submitButton.isHidden = false
-        
-        passwordField.becomeFirstResponder()
-        
-        
-        
-    }
-    
-    
     @IBOutlet weak var passwordField: UITextField!
-    
     @IBOutlet weak var placePicker: UIPickerView!
     @IBOutlet weak var viewPlacePicker: UIView!
     @IBOutlet weak var phoneNumberField: UITextField!
@@ -61,26 +24,50 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
     @IBOutlet weak var placeOfBirthField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    // Button to dismiss Date picker-view
+    @IBAction func donePicker(_ sender: UIButton) {
+        let selectedDate =  dateOfBirthPicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let strdate = dateFormatter.string(from: selectedDate)
+        dateOfBirthField.text = strdate
+        viewPicker.isHidden = true
+        submitButton.isHidden = false
+    }
     
+    // Button to dismiss Place picker-view
+    @IBAction func donePlaceButton(_ sender: UIButton) {
+        viewPlacePicker.isHidden = true
+        submitButton.isHidden = false
+        passwordField.becomeFirstResponder()
+    }
+    
+    // Switch to change privacy of account
+    @IBAction func privacyChangeSwitch() {
+        if privacySwitchOutlet.isOn {
+            privacyLabel.text = "Private account"
+            print("Your account is Private")
+        }
+        else
+        {
+            privacyLabel.text = "Public account"
+            print("Your account is Public")
+        }
+    }
+    
+    // Data set for place picker view
     let cities : [String] = ["Delhi", "Bangalore", "Mumbai", "Chennai", "Kolkata","Ranchi","Bhopal","Gorakhpur","Lucknow", "Pune","Dhanbad", "Nagpur", "Agra","Kanpur"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.placePicker.delegate = self
         self.placePicker.dataSource = self
-        
-        // As view loads, User name field will be the first to respond
         userNameField.becomeFirstResponder()
-        
         privacyLabel.text = "Private account"
-        
-     //   submitButton.isEnabled = false
+        //   submitButton.isEnabled = false
     }
 
-    
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -97,15 +84,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         placeOfBirthField.text = cities[row]
     }
     
-    
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         if textField == userNameField {
             emailIdField.becomeFirstResponder()
         }
-        
         else if textField == emailIdField {
             phoneNumberField.becomeFirstResponder()
         }
@@ -115,45 +97,23 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         else if textField == passwordField {
             passwordField.resignFirstResponder()
         }
-        
-        
         return true
-        
-    }
+        }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == dateOfBirthField {
             submitButton.isHidden = true
             dateOfBirthField.resignFirstResponder()
             viewPicker.isHidden = false
-            
         }
-        
         if textField == placeOfBirthField {
             submitButton.isHidden = true
             placeOfBirthField.resignFirstResponder()
             viewPlacePicker.isHidden = false
         }
-        
         if textField == passwordField{
             submitButton.isEnabled = true
         }
     }
-    
-   @IBAction func privacyChangeSwitch() {
-    
-    if privacySwitchOutlet.isOn {
-        privacyLabel.text = "Private account"
-        print("Your account is Private")
-    }
-    else
-    {
-        privacyLabel.text = "Public account"
-        print("Your account is Public")
-    }
-    }
-    
-    
-   
-}
+} //END of SignUpViewController
 

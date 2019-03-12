@@ -10,35 +10,25 @@ import UIKit
 
 class SegmentViewController: UIViewController {
 
-    
-    
     @IBOutlet weak var designationSegment: UISegmentedControl!
     @IBOutlet weak var designationLabel: UILabel!
-    
-   
     
     @IBAction func segmentValueChang() {
         if designationSegment.selectedSegmentIndex == 0 {
             designationLabel.text = "Welcome Employee"
         }
-        else
-        {
-            designationLabel.text = "Welcome Employer"
-        }
-
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if designationSegment.selectedSegmentIndex == 0 {
-            designationLabel.text = "Welcome Employee"
-        }
-        else
-        {
+        else {
             designationLabel.text = "Welcome Employer"
         }
     }
     
-
-
-}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if designationSegment.selectedSegmentIndex == 0 {
+            designationLabel.text = "Welcome Employee"
+        }
+        else {
+            designationLabel.text = "Welcome Employer"
+        }
+    }
+} // End of SegmentViewController
