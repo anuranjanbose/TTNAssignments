@@ -59,7 +59,7 @@ catch {
  */
 
 
-enum invalidField: Error {
+enum InvalidField: Error {
     
     case initialisationFailed(String)
 }
@@ -70,7 +70,7 @@ class Input {
     init(inputField : String?) throws
     {
         guard  let inputField = inputField else {
-            throw invalidField.initialisationFailed("Object not able to initialise")
+            throw InvalidField.initialisationFailed("Object not able to initialise")
         }
         
         self.inputField = inputField
@@ -120,15 +120,15 @@ func checkError(val : Int) throws
 }
 
 do {
-    try checkError(val: 0)
+    try checkError(val: 0)   // Try
 }
 catch
 {
     print(error)
 }
-var error1 = try? checkError(val: 0)
+var error1 = try? checkError(val: 0) // try?
 print(error1) //It will print nil
-try! checkError(val: 1)
+try! checkError(val: 1)             // try!
 
 
 /*
