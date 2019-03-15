@@ -10,18 +10,16 @@ import UIKit
 
 class SegmentViewController: UIViewController {
 
-    let jobType : [String] = ["Employer", "Employee"]
-    
     @IBOutlet weak var jobTypeSegment: UISegmentedControl!
     @IBOutlet weak var jobTypeLabel: UILabel!
-    
+
     @IBAction func jobTypeSegmentValueChange() {
-    jobTypeLabel.text = "Welcome \(jobType[jobTypeSegment.selectedSegmentIndex])"
-      
+        if let jobType = jobTypeSegment.titleForSegment(at: jobTypeSegment.selectedSegmentIndex) {
+            jobTypeLabel.text = "Welcome \(jobType)"
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       jobTypeLabel.text = "Welcome \(jobType[jobTypeSegment.selectedSegmentIndex])"
+        jobTypeSegmentValueChange()
     }
-    
 } // End of SegmentViewController
