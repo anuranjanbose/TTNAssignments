@@ -17,9 +17,9 @@ class Tailor {
     let pieceOfCloth : Int?
     let availablePieceOfCloth : Int?
     
-    init(len1 : Int, len2 : Int) {
-        self.pieceOfCloth = len1
-        self.availablePieceOfCloth = len2
+    init(clothLength : Int, availableLength : Int) {
+        self.pieceOfCloth = clothLength
+        self.availablePieceOfCloth = availableLength
     }
     
     func checkAvailability() throws -> String
@@ -39,7 +39,7 @@ class Tailor {
     }
 }
 
-let obj = Tailor(len1: 50, len2: 0)
+let obj = Tailor(clothLength: 50, availableLength: 0)
 
 do {
     try obj.checkAvailability()
@@ -213,20 +213,65 @@ enum BonusErrors : Error {
     case lowAttendance(String)
 }
 
+extension BonusErrors: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .notPresent(let message):
+            return message
+        case .fresher(let message):
+            return message
+        case .undesiredCompetency(let message):
+            return message
+        case .lowAttendance(let message):
+            return message
+        default: print("Not match")
+        }
+    }
+}
+
 class BonusProgram {
     
-    var empDataSet : [Employee] = [ Employee(empId: 3200, empName: "Muskaan", empEmail: "muskaan@tothenew.com", joiningDate: 2016, isPresent: false,          competency: "iOS", attendancePercent: 90.0),
-                                    Employee(empId: 3201, empName: "Mithlesh", empEmail: "mithlesh@tothenew.com", joiningDate: 2016, isPresent: true, competency: "FEEN", attendancePercent: 98.8),
-                                    Employee(empId: 3202, empName: "Ankit", empEmail: "ankit@tothenew.com", joiningDate: 2014, isPresent: true, competency: "iOS", attendancePercent: 86.7),
-                                    Employee(empId: 3203, empName: "Sachin", empEmail: "sachin@tothenew.com", joiningDate: 2019, isPresent: true, competency: "Android", attendancePercent: 86.0),
-                                    Employee(empId: 3204, empName: "Merry", empEmail: "Merry@tothenew.com", joiningDate: 2015, isPresent: true, competency: "AI", attendancePercent: 95.0)]
+    var empDataSet : [Employee] = [ Employee(empId: 3200,
+                                             empName: "Muskaan",
+                                             empEmail: "muskaan@tothenew.com",
+                                             joiningDate: 2016, isPresent: false,
+                                             competency: "iOS",
+                                             attendancePercent: 90.0),
+                                    Employee(empId: 3201,
+                                             empName: "Mithlesh",
+                                             empEmail: "mithlesh@tothenew.com",
+                                             joiningDate: 2016,
+                                             isPresent: true,
+                                             competency: "FEEN",
+                                             attendancePercent: 98.8),
+                                    Employee(empId: 3202,
+                                             empName: "Ankit",
+                                             empEmail: "ankit@tothenew.com",
+                                             joiningDate: 2014,
+                                             isPresent: true,
+                                             competency: "iOS",
+                                             attendancePercent: 86.7),
+                                    Employee(empId: 3203,
+                                             empName: "Sachin",
+                                             empEmail: "sachin@tothenew.com",
+                                             joiningDate: 2019,
+                                             isPresent: true,
+                                             competency: "Android",
+                                             attendancePercent: 86.0),
+                                    Employee(empId: 3204,
+                                             empName: "Merry",
+                                             empEmail: "Merry@tothenew.com",
+                                             joiningDate: 2015,
+                                             isPresent: true,
+                                             competency: "AI",
+                                             attendancePercent: 95.0)]
     let currentYear : Int = 2019
     let desiredCompetency : [String] = ["iOS", "Android", "AI", "BigData"]
     
     func allowedForBonus(empEmailId : String) throws {
         for employee in empDataSet {
             if employee.empEmail == empEmailId {
-                if employee.isPresent == false {
+                if !employee.isPresent {
                     throw BonusErrors.notPresent("\(employee.empName) is absent today")
                }
                 if (currentYear - employee.joiningDate) < 1 {
@@ -251,7 +296,8 @@ for email in emailCheckForBonusArray {
         try bonusObject.allowedForBonus(empEmailId: email)
     }
     catch {
-        print(error)
+        print(error.localizedDescription)
+        
     }
 }
 

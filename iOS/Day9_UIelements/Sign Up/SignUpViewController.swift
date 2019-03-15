@@ -48,8 +48,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             privacyLabel.text = "Private account"
             print("Your account is Private")
         }
-        else
-        {
+        else {
             privacyLabel.text = "Public account"
             print("Your account is Public")
         }

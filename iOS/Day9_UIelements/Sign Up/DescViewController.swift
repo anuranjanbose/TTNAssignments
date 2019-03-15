@@ -13,6 +13,7 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var descField: UITextView!
     
+    //On clicking addImage button Alert window will pop out(Camera, Gallery and Cancel)
     @IBAction func addImage(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (alert:UIAlertAction!) -> Void in
@@ -33,7 +34,7 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         profilePicture.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
-    
+
     func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let myPickerController = UIImagePickerController()
@@ -43,6 +44,7 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    //Function to choose images from iPhone's photo library
     func photoLibrary() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let myPickerController = UIImagePickerController()
@@ -51,11 +53,14 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.present(myPickerController, animated: true, completion: nil)
         }
     }
-
+    
+    // Dismisses alert window
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         self.dismiss(animated: true, completion: nil)
+        descField.becomeFirstResponder()
     }
     
+    // Sets photo on Image view
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
         
@@ -66,6 +71,7 @@ class DescViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print("Couldn't upload image!")
         }
         self.dismiss(animated: true, completion: nil)
+        descField.becomeFirstResponder()
     }
     
     func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
