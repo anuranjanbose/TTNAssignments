@@ -16,7 +16,7 @@ class RoundImageViewController: UIViewController {
         roundImageView.layer.borderWidth = 2.0
         //roundImageView.layer.borderColor = UIColor.red as! CGColor
         roundImageView.layer.masksToBounds = false
-        roundImageView.layer.cornerRadius = roundImageView.frame.width/2
+        roundImageView.layer.cornerRadius = roundImageView.frame.size.width/2
         roundImageView.clipsToBounds = true
     }
 }
