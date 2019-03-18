@@ -4,7 +4,7 @@ import UIKit
  
  Task 3 : Difference between Frame and bound, Clip to bound and mask to bound, Strong and Weak Property.
  
- **FRAME vs BOUNDS
+ 1. FRAME vs BOUNDS
  
  Bound is basically relative to a view's own coordinate system.
  
@@ -14,7 +14,7 @@ import UIKit
  
  e.g a View 'A' contains Sub-view 'B'. So frame of B is relative to A
  
- **CLIP TO BOUND vs MASK TO BOUND
+ 2. CLIP TO BOUND vs MASK TO BOUND
  
  *Clip to bound
  
@@ -27,7 +27,7 @@ import UIKit
  Any sublayers of the layer that extend outside its boundaries will be clipped to those boundaries. Think of the layer, in that case, as a window onto its sublayers; anything outside the edges of the window will not be visible. When masksToBounds is NO, no clipping occurs.
  
  
- STRONG vs WEAK PROPERTY
+ 3. STRONG vs WEAK PROPERTY
  
  Strong : It means we want to owe the object we are referencing with strong property. The object will not get destroyed as long as we are strongly referencing. We have to explicitly assign nil to object to destroy it.
  
