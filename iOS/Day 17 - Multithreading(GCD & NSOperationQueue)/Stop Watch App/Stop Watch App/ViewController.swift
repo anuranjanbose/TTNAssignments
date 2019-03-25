@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 extension UITableView {
     func showTableView(_ duration: TimeInterval? = 0.6, onCompletion: (() -> Void)? = nil) {
         self.alpha = 0
