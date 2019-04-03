@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Question4
 //
-//  Created by Akash Verma on 13/03/19.
-//  Copyright © 2019 Akash Verma. All rights reserved.
+//  Created by Anuranjan Bose on 13/03/19.
+//  Copyright © 2019 Anuranjan Bose. All rights reserved.
 //
 
 import UIKit
