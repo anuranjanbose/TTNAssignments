@@ -20,7 +20,8 @@ class ImagePresenterViewController: UIViewController {
     }
     
     @IBAction func onAuthorButtonClick() {
-        UIApplication.shared.openURL(NSURL(string: openURL)! as URL)
+        //UIApplication.shared.openURL(NSURL(string: openURL)! as URL)
+        UIApplication.shared.open(NSURL(string: openURL)! as URL, options: [:], completionHandler: nil)
     }
 
 }
