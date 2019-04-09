@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Location Services App
+
+  Created by Anuranjan Bose on 09/04/19.
+  Copyright © 2019 Anuranjan Bose. All rights reserved.
+*/
+
+"name" = "nombre";
+"state" = "estado";
+"country" = "paísd";
+"dateOfBirth" = "fecha de nacimiento";
+"lotteryWon" = "lotería ganada";
