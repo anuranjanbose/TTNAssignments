@@ -67,7 +67,7 @@ enum InvalidField: Error {
 class Input {
     
     var inputField: String?
-    init(inputField : String?) throws
+    init?(inputField : String?) throws
     {
         guard  let inputField = inputField else {
             throw InvalidField.initialisationFailed("Object not able to initialise")
@@ -79,7 +79,7 @@ class Input {
 }
 
 do {
-    let obj = try Input(inputField: nil)
+    let _ = try Input(inputField: nil)
 }
 catch {
     print(error)
